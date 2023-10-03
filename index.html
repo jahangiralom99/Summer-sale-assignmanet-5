@@ -56,7 +56,10 @@
           <h1 class="text-3xl font-semibold">Kitchenware</h1>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Kitchenware section -->
-            <div class="card bg-base-100 shadow-xl p-4">
+            <div
+              onclick="clickCardBtn(this)"
+              class="card bg-base-100 shadow-xl p-4"
+            >
               <!-- card 1 -->
               <figure class="p-5 bg-[#11111108]">
                 <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
@@ -111,11 +114,10 @@
           <!-- start Sportswear---------------------------------- -->
           <h1 class="text-3xl font-semibold mt-12">Sportswear</h1>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Kitchenware section -->
             <div class="card bg-base-100 shadow-xl p-4">
               <!-- card 1 -->
               <figure class="p-5 bg-[#11111108]">
-                <img src="images/prod1.png" alt="Shoes" class="rounded-xl" />
+                <img src="images/prod4.png" alt="Shoes" class="rounded-xl" />
               </figure>
               <div class="card-body items-center text-center">
                 <p class="text-[#FFC107]">
@@ -125,14 +127,14 @@
                   <i class="fa-regular fa-star"></i>
                   <i class="fa-regular fa-star"></i>
                 </p>
-                <h2 class="card-title">K. Accessories</h2>
-                <p>39.00 TK</p>
+                <h2 class="card-title">Sports Back Cap</h2>
+                <p>49.00 TK</p>
               </div>
             </div>
             <div class="card bg-base-100 shadow-xl p-4">
               <!-- card 2 -->
               <figure class="p-5 bg-[#11111108]">
-                <img src="images/prod2.png" alt="Shoes" class="rounded-xl" />
+                <img src="images/prod5.png" alt="Shoes" class="rounded-xl" />
               </figure>
               <div class="card-body items-center text-center">
                 <p class="text-[#FFC107]">
@@ -142,14 +144,14 @@
                   <i class="fa-regular fa-star"></i>
                   <i class="fa-regular fa-star"></i>
                 </p>
-                <h2 class="card-title">K. Accessories</h2>
-                <p>25.00 TK</p>
+                <h2 class="card-title">Full Jersey Set</h2>
+                <p>69.00 TK</p>
               </div>
             </div>
             <div class="card bg-base-100 shadow-xl p-4">
               <!-- card 3 -->
               <figure class="p-5 bg-[#11111108]">
-                <img src="images/prod3.png" alt="Shoes" class="rounded-xl" />
+                <img src="images/prod6.png" alt="Shoes" class="rounded-xl" />
               </figure>
               <div class="card-body items-center text-center">
                 <p class="text-[#FFC107]">
@@ -159,8 +161,8 @@
                   <i class="fa-regular fa-star"></i>
                   <i class="fa-regular fa-star"></i>
                 </p>
-                <h2 class="card-title">K. Accessories</h2>
-                <p>25.00 TK</p>
+                <h2 class="card-title">Sports cates</h2>
+                <p>159.00 TK</p>
               </div>
             </div>
           </div>
@@ -171,9 +173,10 @@
             <input
               class="border-2 p-3 mt-2"
               type="text"
+              id="coupon-field"
               placeholder="Coupon Code"
             />
-            <button
+            <button onclick="addSumByAnother()" id="apply-btn"
               class="btn bg-[#E527B2] hover:bg-[#901a70] px-5 py-3 rounded-lg font-bold text-white"
               disabled
             >
@@ -181,14 +184,19 @@
             </button>
           </div>
           <div>
-            <div></div>
-            <div class="shadow-2xl mt-6 rounded-lg">
+            <div
+              id="text-container"
+              class="shadow-2xl mt-6 rounded-lg p-6"
+            ></div>
+            <div class="shadow-2xl mt-6 rounded-lg p-6">
               <hr />
-              <p class="font-bold">Total Price : 00 TK</p>
-              <p class="font-bold">Discount : 00 TK</p>
-              <p class="font-bold">Total : 00 TK</p>
+              <p class="font-bold">
+                Total Price : <span id="price">00</span> TK
+              </p>
+              <p class="font-bold">Discount : <span id="discount">00</span> TK</p>
+              <p class="font-bold">Total : <span id="total">00</span> TK</p>
               <hr class="mt-2" />
-              <button
+              <button id="make-btn"
                 class="btn bg-[#E527B2] hover:bg-[#901a70] px-5 w-full py-3 rounded-lg font-bold text-white"
                 disabled
               >
@@ -199,5 +207,7 @@
         </div>
       </section>
     </main>
+    <!-- js Link -->
+    <script src="js/summer.js"></script>
   </body>
 </html>
