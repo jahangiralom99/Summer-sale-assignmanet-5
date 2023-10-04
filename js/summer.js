@@ -18,10 +18,11 @@ function clickCardBtn(target) {
 
   priceElement.innerText = sum;
 
-  if (priceElement.innerText > 200) {
+  if (priceElement.innerText >= 200) {
     const btn = document.getElementById("apply-btn");
     btn.removeAttribute("disabled");
-  } else if (priceElement.innerText > 1) {
+  } 
+  if (priceElement.innerText >= 1) {
     const btn = document.getElementById("make-btn");
     btn.removeAttribute("disabled");
   }
