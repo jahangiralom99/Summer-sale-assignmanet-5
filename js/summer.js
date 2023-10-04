@@ -16,7 +16,7 @@ function clickCardBtn(target) {
 
   sum = parseFloat(sum) + parseFloat(price);
 
-  priceElement.innerText = sum;
+  priceElement.innerText = sum.toFixed(2);
 
   if (priceElement.innerText >= 200) {
     const btn = document.getElementById("apply-btn");
@@ -37,9 +37,9 @@ function addSumByAnother() {
   couponField.value = "";
   if (field === "SELL200") {
     const discount = (parseFloat(priceElement) * 20) / 100;
-    discountElement.innerText = discount;
+    discountElement.innerText = discount.toFixed(2);
     const total = parseFloat(priceElement) - discount;
-    totalElement.innerText = total;
+    totalElement.innerText = total.toFixed(2);
   } else {
     alert("wrong coupon");
   }
